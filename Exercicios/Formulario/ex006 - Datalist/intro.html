@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datalist - Formularios</title>
+</head>
+<body>
+  <!--
+    # <datalist>
+
+    - Lista de valores com sugestão a uma tag <input>.
+    - valores sugestivos e não obrigatorios
+    - Usuarios poderão selecionar um dos valores, ou colocar um valor
+     diferente da sugestão.
+    
+    Atributos comuns
+    - type
+        - submit
+        - reset
+        - button
+       - autofocus
+       - disabled
+       - name
+       - value
+       - form
+
+  <datalist id="fruitsdata">
+    
+    <option>banana</option>
+    <option>apple</option>
+    <option>orange</option>
+    <option>mango</option>
+    <option>cherry</option>
+
+  </datalist>
+
+  #List
+
+  - Recebe como valor o id <datalist> residente no mesmo
+   documento.
+
+
+
+   # Tipos de input suportados
+
+   - text, search, url, tel, email. date, month, week, time,
+   datetime-local, number, range e color.
+
+   * Valores de datalist que não são  compatives com o tipo do <input>
+   não serão apresentados.
+
+
+
+   # Tipo de input não suportados (conforme espicificação)
+   
+   - hidden, password, checkbox, radio, file ou qualquer tipo de
+    button 
+
+
+    # User Agent
+    
+    Verificar a compatibilidade com o browser https://caniuse.com
+  --> 
+  <input type="text" list="fruitsdata" placeholder="Escolha uma fruta">
+
+  <datalist id="fruitsdata">
+    
+    <option>banana</option>
+    <option>apple</option>
+    <option>orange</option>
+    <option>mango</option>
+    <option>cherry</option>
+
+  </datalist>
+
+  <datalist id="colorsdata">
+     <option>#ff0000</option>
+     <option>#00ff00</option>
+  </datalist>
+  <input type="color" list="colorsdata">
+  
+</body>
+</html>

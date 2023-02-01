@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> URL </title>
+</head>
+<body>
+  <!--
+    <input type="URL" > 
+   
+    - Espera que o usuario digite uma URL
+    - Ira validar se o valor digitado é uma URL
+
+    #Atributos
+
+    - placeholder
+    - readonly/disabled
+    - value
+
+    - required
+
+    - minlength / maxlength
+      * O minimo e/ou p maximo valor que o campo ira conter
+      
+    - size
+      * Valor numero indicando qunatos caracteres esse
+      campo deveria conter, modificando o tamanho do campo
+      para o usuario.
+      
+    - pattern
+      * Uso de expressão regular para validar o campo
+      * exemplo: usuario só podera colocar dominio
+       .com.br
+        * pattern=".*\.com\.br\/.*"
+        
+    - list
+      * o id de uma tag <datalist> que está no mesmo documento
+      * <datalist> ira conter uma lista de valores pré
+      definidos a fim de sugerir ao usuario, quais valores
+      estão disponiveis 
+        * Os valores do <datalist> que não forem
+          compativeis com o campo, não serão apresentados
+          como sugestão.
+    
+    - spellcheck
+          * Habilitar a verificação ortografica para esse input
+  --> 
+
+
+  <datalist id="urlsdata">
+    <option>https://exemplo.com</option>
+    <option>https://exemplo.com.br</option>
+  </datalist>
+  
+  <form action="">
+    
+    <input type="url"
+      placeholder="https://exemplo.com.br"
+      pattern=".*\.com\.br\/.*" 
+      title="Somente dominios .com.br serão aceitos"
+      required
+      list="urlsdata" >
+
+    <button type="submit">Enviar</button>
+    
+  </form>
+  
+</body>
+</html>
